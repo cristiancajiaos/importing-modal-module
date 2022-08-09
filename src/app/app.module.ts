@@ -1,3 +1,5 @@
+import { BazModalComponent } from './foo/baz-modal/baz-modal.component';
+import { FooModule } from './foo/foo.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -14,9 +16,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FooModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    BazModalComponent
+  ]
 })
 export class AppModule { }
